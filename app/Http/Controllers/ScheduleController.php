@@ -19,6 +19,22 @@ class ScheduleController extends Controller
         $day = $id;
         return view('add',['day' => $day]);
     }
+    //部位追加登録処理
+    public function store(Request $request,$id)
+    {
+        $day = $id;
+        $schedule = new Schedule();
+
+        //値を代入
+        $schedule->start_date = $request->sch_date;
+        $schedule->end_date = $request->sch_date;
+        $schedule->sch_part = $request->sch_part;
+
+        // インスタンスの状態をデータベースに書き込む
+        $schedule->save();
+
+        return redirect()->route('index');
+    }
 
     //イベントを取得
     public function scheduleGet(Request $request)

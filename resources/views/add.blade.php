@@ -8,7 +8,7 @@
 </head>
 <body>
     <div>
-        <form action="" method="post" enctype="multipart/form-data">
+        <form action="{{ route('store',['id' => $day]) }}" method="post" enctype="multipart/form-data">
             @csrf
             <table>
                 <tr>

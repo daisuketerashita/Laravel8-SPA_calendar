@@ -19,3 +19,4 @@ Route::get('/',[ScheduleController::class,'index'])->name('index');
 Route::post('/schedule-get',[ScheduleController::class,'scheduleGet'])->name('schedule-get');
 //部位登録画面
 Route::get('/calendar/add/{id}',[ScheduleController::class,'add'])->name('add');
+Route::post('/calendar/add/{id}',[ScheduleController::class,'store'])->name('store');
