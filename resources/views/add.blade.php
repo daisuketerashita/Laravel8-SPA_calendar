@@ -16,13 +16,13 @@
                 @csrf
                 <div class="inner-wrapper">
                     <h3>日付</h3>
-                    <input type='text' class='form-control' name='sch_date' value="{{ $day }}">
+                    <input type='text' class='sch_date' name='sch_date' value="{{ $day }}">
                     <h3>部位</h3>
-                    <input type="radio" name="sch_part" value="胸">胸
-                    <input type="radio" name="sch_part" value="脚">脚
-                    <input type="radio" name="sch_part" value="背中">背中
-                    <input type="radio" name="sch_part" value="腕">腕
-                    <input type="radio" name="sch_part" value="肩">肩
+                    <input type="radio" name="sch_part" value="胸" class="sch_part">胸
+                    <input type="radio" name="sch_part" value="脚" class="sch_part">脚
+                    <input type="radio" name="sch_part" value="背中" class="sch_part">背中
+                    <input type="radio" name="sch_part" value="腕" class="sch_part">腕
+                    <input type="radio" name="sch_part" value="肩" class="sch_part">肩
                     <div class="inner-button">
                     <p><input type='submit' class='form-btn next-btn' value='種目管理画面へ'></p>
                     <p><button type="button" class='form-btn prev-btn' onclick="location.href='{{ route('index') }}' ">戻る</button></p>

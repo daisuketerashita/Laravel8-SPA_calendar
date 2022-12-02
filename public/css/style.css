@@ -3,32 +3,33 @@
 }
 
 body {
-    background-color: #C0BDB9;
+    background-color: #FFF;
     font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }
 
-
+/* 
+フォーム
+*/
 .form-content {
-    width: 960px;
-    /*横幅*/
+    width: 800px;
     margin: 0 auto;
-    /*中央寄せ*/
     padding: 60px 0;
 }
 
 .inner-wrapper{
-    background-color: #24323C;
+    background-color: #4FBD9F;
     color: #FFF;
     font-size: 1.6rem;
-    padding: 20px 0px;
-    text-align: center;
+    padding: 30px 0px;
 }
 
 .form-btn{
     width: 200px;
     height: 50px;
 }
-
+/* 
+ボタン
+*/
 .next-btn{
     background-color: #1BB187;
     color: #FFF;
