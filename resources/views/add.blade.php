@@ -14,20 +14,51 @@
         <div class="form-content">
             <form action="{{ route('store',['id' => $day]) }}" method="post" enctype="multipart/form-data">
                 @csrf
-                <div class="inner-wrapper">
-                    <h3>日付</h3>
-                    <input type='text' class='sch_date' name='sch_date' value="{{ $day }}">
-                    <h3>部位</h3>
-                    <input type="radio" name="sch_part" value="胸" class="sch_part">胸
-                    <input type="radio" name="sch_part" value="脚" class="sch_part">脚
-                    <input type="radio" name="sch_part" value="背中" class="sch_part">背中
-                    <input type="radio" name="sch_part" value="腕" class="sch_part">腕
-                    <input type="radio" name="sch_part" value="肩" class="sch_part">肩
-                    <div class="inner-button">
-                    <p><input type='submit' class='form-btn next-btn' value='種目管理画面へ'></p>
-                    <p><button type="button" class='form-btn prev-btn' onclick="location.href='{{ route('index') }}' ">戻る</button></p>
-                    </div>
-                </div>
+                <table class="inner-wrapper">
+                    <tr>
+                        <th><label for="sch_date">日付：</label></th>
+                        <td><input type='text' class='sch_date' name='sch_date' value="{{ $day }}"></td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="sch_part">部位：</label>
+                        </th>
+                        <td>
+                            <input type="radio" name="sch_part" value="胸" class="sch_part" id="sch_chest"><label for="sch_chest">胸</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>
+                            <input type="radio" name="sch_part" value="脚" class="sch_part" id="sch_leg"><label for="sch_leg">脚</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>
+                            <input type="radio" name="sch_part" value="背中" class="sch_part" id="sch_back"><label for="sch_back">背中</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>
+                            <input type="radio" name="sch_part" value="腕" class="sch_part" id="sch_arm"><label for="sch_arm">腕</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>
+                            <input type="radio" name="sch_part" value="肩" class="sch_part" id="sch_shoulder"><label for="sch_shoulder">肩</label>
+                        </td>
+                    </tr>
+                    
+                    <tr class="inner-button">
+                        <td colspan="2"><input type='submit' class='form-btn next-btn' value='種目管理画面へ'></td>
+                    </tr>
+                    <tr class="inner-button">
+                        <td colspan="2"><button type="button" class='form-btn prev-btn' onclick="location.href='{{ route('index') }}' ">戻る</button></td>
+                    </tr>
+                </table>
             </form>
         </div><!-- /.form-content -->
     </div><!-- /.form-wrapper -->
