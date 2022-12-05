@@ -16,7 +16,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 60px 0;
+    padding: 50px 0;
     margin-top: 4%;
     border: solid 6px #4FBD9F;
     border-radius: 10px;
@@ -26,18 +26,32 @@ body {
     width: 100%;
     font-size: 2rem;
 }
-.inner-wrapper th,td {
+.inner-wrapper th{
     padding: 5px;
+    text-align: right;
+    vertical-align: top;
 }
-input[type="text"] {
+.inner-wrapper td{
+    padding: 5px;
+    vertical-align: middle;
+}
+input[type="text"],input[type="number"]{
     vertical-align: middle;
     padding: 4px;
     font-size: 1.4rem;
     margin-left: 20px;
 }
-input[type="radio"] {
+.memo_td{
+    padding-top: 4px;
+}
+textarea{
+    vertical-align: middle;
+    resize: none;
+    width:245px;
+    height:200px;
     margin-left: 20px;
 }
+
 
 
 

@@ -35,7 +35,7 @@ class ScheduleController extends Controller
         // インスタンスの状態をデータベースに書き込む
         $schedule->save();
 
-        return redirect()->route('index');
+        return redirect()->route('exe.add',['id' => $schedule->id]);
     }
 
     //イベントを取得
