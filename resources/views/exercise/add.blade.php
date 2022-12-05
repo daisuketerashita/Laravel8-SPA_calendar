@@ -12,7 +12,7 @@
 <body>
     <div class="form-wrapper">
         <div class="form-content">
-            <form action="" method="post" enctype="multipart/form-data">
+            <form action="{{ route('exe.store',['id' => $schedule_id]) }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <table class="inner-wrapper" border="1">
                     <tr>
