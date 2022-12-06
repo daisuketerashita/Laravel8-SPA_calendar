@@ -24,3 +24,5 @@ Route::post('/calendar/add/{id}',[ScheduleController::class,'store'])->name('sto
 //種目登録
 Route::get('/calendar/add/exercise/{id}',[ExerciseController::class,'add'])->name('exe.add');
 Route::post('/calendar/add/exercise/{id}',[ExerciseController::class,'store'])->name('exe.store');
+//詳細ページ
+Route::get('/calendar/detail/{id}',[ScheduleController::class,'detail'])->name('detail');

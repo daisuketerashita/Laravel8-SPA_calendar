@@ -17310,6 +17310,18 @@ var calendar = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__.Calendar(cale
       alert("登録に失敗しました");
     });
   },
+  eventClick: function eventClick(e) {
+    console.log(e);
+    /* axios
+        .get("/calendar/detail/" + e)
+        .then((res) => {
+            location.href = "/calendar/detail/" + e;
+        })
+        .catch(() => {
+            alert("登録に失敗しました");
+        }); */
+  },
+
   events: function events(info, successCallback, failureCallback) {
     // Laravelのイベント取得処理の呼び出し
     axios__WEBPACK_IMPORTED_MODULE_5___default().post("/schedule-get", {

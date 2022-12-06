@@ -30,6 +30,18 @@ let calendar = new Calendar(calendarEl, {
             });
     },
 
+    eventClick: (e) => {
+        console.log(e);
+        /* axios
+            .get("/calendar/detail/" + e)
+            .then((res) => {
+                location.href = "/calendar/detail/" + e;
+            })
+            .catch(() => {
+                alert("登録に失敗しました");
+            }); */
+    },
+
     events: function (info, successCallback, failureCallback) {
         // Laravelのイベント取得処理の呼び出し
         axios
