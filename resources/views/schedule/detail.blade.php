@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>{{ $date }}</h1>
-    <p>{{ $title }}</p>
+    <h3>{{ $schedule->start_date }}</h3>
+    <h3>{{ $schedule->sch_part }}</h3>
 </body>
 </html>

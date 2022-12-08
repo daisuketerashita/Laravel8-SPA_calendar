@@ -55,7 +55,6 @@ class ScheduleController extends Controller
         // 登録処理
         return Schedule::query()
             ->select(
-                // FullCalendarの形式に合わせる
                 'start_date as start',
                 'end_date as end',
                 'sch_part as title'
@@ -69,9 +68,14 @@ class ScheduleController extends Controller
     //詳細画面表示
     public function detail($date,$title)
     {
+        //スケジュール情報を取得
+        $schedule = Schedule::where('start_date',$date)->where('sch_part',$title)->first();
+
+        // 選ばれた部位に紐づく種目を取得する
+        // $exercises = Exercise::where('schedule_id', $schedule->id)->get();
+
         return view('schedule.detail',[
-            'date' => $date,
-            'title' => $title,
+            'schedule' => $schedule,
         ]);
     }
 }
