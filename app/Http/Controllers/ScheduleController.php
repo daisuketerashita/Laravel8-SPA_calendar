@@ -67,17 +67,11 @@ class ScheduleController extends Controller
     }
 
     //詳細画面表示
-    public function detail($id)
+    public function detail($date,$title)
     {
-        //ユーザーに紐付いたスケジュール情報を取得
-        $schedule = Schedule::where('id',$id)->first();
-
-        // 選ばれた部位に紐づく種目を取得する
-        $exercises = Exercise::where('schedule_id', $schedule->id)->get();
-
         return view('schedule.detail',[
-            'schedule' => $schedule,
-            'exercises' => $exercises,
+            'date' => $date,
+            'title' => $title,
         ]);
     }
 }

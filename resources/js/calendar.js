@@ -31,15 +31,18 @@ let calendar = new Calendar(calendarEl, {
     },
 
     eventClick: (e) => {
-        console.log(e);
-        /* axios
-            .get("/calendar/detail/" + e)
+        let title = e.event.title;
+        let defId = e.event._def.defId;
+        let date = e.event.startStr
+        console.log(e.event.groupId);
+        axios
+            .get("/calendar/detail/" + date + "/" + title)
             .then((res) => {
-                location.href = "/calendar/detail/" + e;
+                location.href = "/calendar/detail/" + date + "/" + title;
             })
             .catch(() => {
                 alert("登録に失敗しました");
-            }); */
+            });
     },
 
     events: function (info, successCallback, failureCallback) {

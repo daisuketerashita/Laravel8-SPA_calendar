@@ -25,4 +25,4 @@ Route::post('/calendar/add/{id}',[ScheduleController::class,'store'])->name('sto
 Route::get('/calendar/add/exercise/{id}',[ExerciseController::class,'add'])->name('exe.add');
 Route::post('/calendar/add/exercise/{id}',[ExerciseController::class,'store'])->name('exe.store');
 //詳細ページ
-Route::get('/calendar/detail/{id}',[ScheduleController::class,'detail'])->name('detail');
+Route::get('/calendar/detail/{date}/{title}',[ScheduleController::class,'detail'])->name('detail');
