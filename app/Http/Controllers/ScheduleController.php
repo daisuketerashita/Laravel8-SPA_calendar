@@ -19,7 +19,7 @@ class ScheduleController extends Controller
     public function add($id)
     {
         $day = $id;
-        return view('add',['day' => $day]);
+        return view('schedule.add',['day' => $day]);
     }
     //部位追加登録処理
     public function store(Request $request,$id)

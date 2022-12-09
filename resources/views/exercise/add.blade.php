@@ -14,7 +14,7 @@
         <div class="form-content">
             <form action="{{ route('exe.store',['id' => $schedule_id]) }}" method="post" enctype="multipart/form-data">
                 @csrf
-                <table class="inner-wrapper" border="1">
+                <table class="inner-wrapper">
                     <tr>
                         <th><label for="name">種目名：</label></th>
                         <td><input type='text' class='sch_date' name='name'></td>
@@ -35,12 +35,8 @@
                         <th class="memo_th"><label for="exe_contents">メモ：</label></th>
                         <td class="memo_td"><textarea name="exe_contents" id="" cols="30" rows="10"></textarea></td>
                     </tr>
-                    
                     <tr class="inner-button">
                         <td colspan="2"><input type='submit' class='form-btn next-btn' value='登録'></td>
-                    </tr>
-                    <tr class="inner-button">
-                        <td colspan="2"><button type="button" class='form-btn prev-btn' onclick="location.href='{{ route('index') }}' ">戻る</button></td>
                     </tr>
                 </table>
             </form>

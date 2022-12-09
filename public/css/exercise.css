@@ -79,10 +79,6 @@ textarea{
     background-color: #1BB187;
     color: #FFF;
 }
-.prev-btn {
-    background-color: #435259;
-    color: #FFF;
-}
 .form-btn:hover{
     opacity: 0.9;
 }
