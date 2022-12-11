@@ -72,10 +72,11 @@ class ScheduleController extends Controller
         $schedule = Schedule::where('start_date',$date)->where('sch_part',$title)->first();
 
         // 選ばれた部位に紐づく種目を取得する
-        // $exercises = Exercise::where('schedule_id', $schedule->id)->get();
+        $exercises = Exercise::where('schedule_id', $schedule->id)->get();
 
         return view('schedule.detail',[
             'schedule' => $schedule,
+            'exercises' => $exercises,
         ]);
     }
 }
