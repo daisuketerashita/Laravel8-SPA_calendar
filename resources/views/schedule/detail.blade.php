@@ -26,7 +26,7 @@
                     <li><span>セット数：</span>{{ $exercise->set_num }}セット</li>
                     <li><span>メモ：</span>{{ $exercise->exe_contents }}</li>
                     <button type="button" class='form-btn prev-btn' onclick="location.href='{{ route('exe.edit',['id' => $schedule->id,'exe_id' => $exercise->id]) }}'">編集</button>
-                    <button>削除</button>
+                    <button type="button" class='form-btn prev-btn' onclick="location.href='{{ route('exe.delete',['id' => $schedule->id,'exe_id' => $exercise->id]) }}'">削除</button>
                     <hr>
                     @endforeach
                 </ul>

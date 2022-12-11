@@ -47,6 +47,7 @@ class ExerciseController extends Controller
     //編集処理
     public function update(int $id,int $exe_id,Request $request)
     {
+        $schedule = Schedule::find($id);
         //種目を取得
         $exercise = Exercise::find($exe_id);
 
@@ -57,6 +58,19 @@ class ExerciseController extends Controller
         $exercise->set_num = $request->set_num;
         $exercise->exe_contents = $request->exe_contents;
         $exercise->save();
+
+        return view('schedule.detail',[
+            'schedule' => $schedule,
+            'exercise' => $exercise,
+        ]);
+    }
+
+    //削除機能
+    public function delete(int $id,int $exe_id)
+    {
+        $exercise = Exercise::find($exe_id);
+
+        $exercise->delete();
 
         return redirect()->route('index');
     }

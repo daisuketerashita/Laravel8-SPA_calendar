@@ -29,3 +29,5 @@ Route::get('/calendar/detail/{date}/{title}',[ScheduleController::class,'detail'
 //種目編集
 Route::get('/calendar/{id}/edit/{exe_id}',[ExerciseController::class,'edit'])->name('exe.edit');
 Route::post('/calendar/{id}/edit/{exe_id}',[ExerciseController::class,'update'])->name('exe.update');
+//種目削除
+Route::get('/calendar/{id}/delete/{exe_id}',[ExerciseController::class,'delete'])->name('exe.delete');
