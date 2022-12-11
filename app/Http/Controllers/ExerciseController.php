@@ -31,4 +31,16 @@ class ExerciseController extends Controller
 
         return redirect()->route('index');
     }
+
+    //編集画面の表示
+    public function edit(int $id,int $exe_id)
+    {
+        $schedule = Schedule::find($id);
+        $exercise = Exercise::find($exe_id);
+
+        return view('exercise.edit',[
+            'schedule' => $schedule,
+            'exercise' => $exercise,
+        ]);
+    }
 }
