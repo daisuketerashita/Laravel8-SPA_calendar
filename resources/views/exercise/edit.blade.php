@@ -14,7 +14,7 @@
         <div class="form-content">
             <h3>{{ $schedule->start_date }}</h3>
             <h3>{{ $schedule->sch_part }}</h3>
-            <form action="" method="post" enctype="multipart/form-data">
+            <form action="{{ route('exe.update',['id' => $schedule->id,'exe_id' => $exercise->id ]) }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <table class="inner-wrapper">
                     <tr>

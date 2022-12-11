@@ -43,4 +43,21 @@ class ExerciseController extends Controller
             'exercise' => $exercise,
         ]);
     }
+
+    //編集処理
+    public function update(int $id,int $exe_id,Request $request)
+    {
+        //種目を取得
+        $exercise = Exercise::find($exe_id);
+
+        //値を代入
+        $exercise->name = $request->name;
+        $exercise->weight = $request->weight;
+        $exercise->repetition = $request->repetition;
+        $exercise->set_num = $request->set_num;
+        $exercise->exe_contents = $request->exe_contents;
+        $exercise->save();
+
+        return redirect()->route('index');
+    }
 }
