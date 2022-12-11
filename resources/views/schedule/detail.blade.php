@@ -9,5 +9,7 @@
 <body>
     <h3>{{ $schedule->start_date }}</h3>
     <h3>{{ $schedule->sch_part }}</h3>
+    <p>{{ $schedule->id }}</p>
+    <a href="{{ route('index') }}">戻る</a>
 </body>
 </html>
