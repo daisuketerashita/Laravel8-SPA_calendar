@@ -41,6 +41,9 @@
                         <td colspan="2"><input type='submit' class='form-btn next-btn' value='編集'></td>
                     </tr>
                     <tr class="inner-button">
+                        <td colspan="2"><button type="button" class='form-btn prev-btn' onclick="location.href='{{ route('exe.delete',['id' => $schedule->id,'exe_id' => $exercise->id]) }}'">削除</button></td>
+                    </tr>
+                    <tr class="inner-button">
                         <td colspan="2"><button type="button" class='form-btn prev-btn' onclick="location.href='{{ route('detail',['date' => $schedule->start_date,'title' => $schedule->sch_part]) }}' ">戻る</button></td>
                     </tr>
                 </table>
