@@ -19,7 +19,7 @@
             </div><!-- /.part_content -->
             <div class="exe_content">
                 <ul>
-                    @foreach($exercises as $exercise)
+                    @foreach($exercises ?? '' as $exercise)
                     <li><span>種目名：</span>{{ $exercise->name }}</li>
                     <li><span>重さ：</span>{{ $exercise->weight }}kg</li>
                     <li><span>レップ数：</span>{{ $exercise->repetition }}回</li>

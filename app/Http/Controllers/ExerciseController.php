@@ -50,6 +50,8 @@ class ExerciseController extends Controller
         $schedule = Schedule::find($id);
         //種目を取得
         $exercise = Exercise::find($exe_id);
+        // 選ばれた部位に紐づく種目を取得する
+        $exercises = Exercise::where('schedule_id', $schedule->id)->get();
 
         //値を代入
         $exercise->name = $request->name;
@@ -59,9 +61,11 @@ class ExerciseController extends Controller
         $exercise->exe_contents = $request->exe_contents;
         $exercise->save();
 
-        return view('schedule.detail',[
-            'schedule' => $schedule,
-            'exercise' => $exercise,
+        return redirect()->route('detail',[
+                'date' => $schedule->start_date,
+                'title' => $schedule->sch_part,
+                'schedule' => $schedule,
+                'exercises' => $exercises,
         ]);
     }
 
