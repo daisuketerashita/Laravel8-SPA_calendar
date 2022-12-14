@@ -13,6 +13,11 @@
     <div class="form-wrapper">
         <div class="form-content">
             <form action="{{ route('store',['id' => $day]) }}" method="post" enctype="multipart/form-data">
+                <div class="err-content alert-danger">
+                @foreach($errors->all() as $message)
+                    <li>{{ $message }}</li>
+                @endforeach
+                </div>
                 @csrf
                 <table class="inner-wrapper">
                     <tr>
@@ -51,7 +56,7 @@
                             <input type="radio" name="sch_part" value="肩" class="sch_part" id="sch_shoulder"><label for="sch_shoulder">肩</label>
                         </td>
                     </tr>
-                    
+
                     <tr class="inner-button">
                         <td colspan="2"><input type='submit' class='form-btn next-btn' value='種目管理画面へ'></td>
                     </tr>

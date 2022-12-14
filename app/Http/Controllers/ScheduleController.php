@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Schedule;
 use App\Models\Exercise;
+use App\Http\Requests\CreateSchedule;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -22,7 +23,7 @@ class ScheduleController extends Controller
         return view('schedule.add',['day' => $day]);
     }
     //部位追加登録処理
-    public function store(Request $request,$id)
+    public function store(CreateSchedule $request,$id)
     {
         $day = $id;
         $schedule = new Schedule();
