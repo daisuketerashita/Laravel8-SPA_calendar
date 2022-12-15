@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Exercise;
 use App\Models\Schedule;
+use App\Http\Requests\CreateExercise;
 use Illuminate\Http\Request;
 
 class ExerciseController extends Controller
@@ -15,7 +16,7 @@ class ExerciseController extends Controller
     }
 
     //種目登録処理
-    public function store($id,Request $request){
+    public function store($id,CreateExercise $request){
         $schedule_id = Schedule::find($id);
         
         //値を代入

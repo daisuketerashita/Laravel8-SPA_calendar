@@ -13,6 +13,11 @@
     <div class="form-wrapper">
         <div class="form-content">
             <form action="{{ route('exe.store',['id' => $schedule_id]) }}" method="post" enctype="multipart/form-data">
+                <div class="err-content alert-danger">
+                @foreach($errors->all() as $message)
+                    <li>{{ $message }}</li>
+                @endforeach
+                </div>
                 @csrf
                 <table class="inner-wrapper">
                     <tr>
