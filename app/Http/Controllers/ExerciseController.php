@@ -46,7 +46,7 @@ class ExerciseController extends Controller
     }
 
     //編集処理
-    public function update(int $id,int $exe_id,Request $request)
+    public function update(int $id,int $exe_id,CreateExercise $request)
     {
         $schedule = Schedule::find($id);
         //種目を取得

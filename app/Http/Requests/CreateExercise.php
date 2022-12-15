@@ -24,10 +24,10 @@ class CreateExercise extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
-            'weight' => 'required',
-            'repetition' => 'required',
-            'set_num' => 'required',
+            'name' => 'required|max:80',
+            'weight' => 'required|numeric',
+            'repetition' => 'required|numeric',
+            'set_num' => 'required|numeric',
         ];
     }
 

@@ -24,7 +24,7 @@ class CreateSchedule extends FormRequest
     public function rules()
     {
         return [
-            'sch_date' => 'required',
+            'sch_date' => 'required|max:40',
             'sch_part' => 'required',
         ];
     }

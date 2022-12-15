@@ -15,6 +15,11 @@
             <h3>{{ $schedule->start_date }}</h3>
             <h3>{{ $schedule->sch_part }}</h3>
             <form action="{{ route('exe.update',['id' => $schedule->id,'exe_id' => $exercise->id ]) }}" method="post" enctype="multipart/form-data">
+                <div class="err-content alert-danger">
+                @foreach($errors->all() as $message)
+                    <li>{{ $message }}</li>
+                @endforeach
+                </div>
                 @csrf
                 <table class="inner-wrapper">
                     <tr>
